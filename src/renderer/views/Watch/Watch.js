@@ -810,11 +810,11 @@ export default Vue.extend({
       if (this.watchingPlaylist) {
         this.playNextTimeout = setTimeout(() => {
           this.$refs.watchVideoPlaylist.playNextVideo()
-        }, 5000)
+        }, 1000)
 
         this.showToast({
-          message: this.$t('Playing next video in 5 seconds.  Click to cancel'),
-          time: 5500,
+          message: this.$t('Playing next video in 1 seconds.  Click to cancel'),
+          time: 1000,
           action: () => {
             clearTimeout(this.playNextTimeout)
             this.showToast({
@@ -833,11 +833,11 @@ export default Vue.extend({
           this.showToast({
             message: this.$t('Playing Next Video')
           })
-        }, 5000)
+        }, 1000)
 
         this.showToast({
-          message: this.$t('Playing next video in 5 seconds.  Click to cancel'),
-          time: 5500,
+          message: this.$t('Playing next video in 1 seconds.  Click to cancel'),
+          time: 1000,
           action: () => {
             clearTimeout(this.playNextTimeout)
             this.showToast({
